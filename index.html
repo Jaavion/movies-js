@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index2.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+    <div id="app">
+      <!-- <h1>{{ movies }}</h1> -->
+      <p v-for="movie in movies">{{movie}}</p>
+      <p>{{newMovie}}</p>
+      <input v-model="newMovie" placeholder="edit me" />
+      <button v-on:click="addNewMovie()">Add Movie</button>
+      <div v-if="movies.includes('zoolander')">
+        <img src="http://www.w3schools.com/images/w3schools_green.jpg" />
+      </div>
+    </div>
+  </body>
+</html>
